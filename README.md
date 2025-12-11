@@ -1,16 +1,72 @@
-# React + Vite
+# Focus Flow 🌊
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Focus Flow Banner](public/banner-placeholder.png)
 
-Currently, two official plugins are available:
+> A modern, aesthetic productivity dashboard built for flow state.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Focus Flow is a beautiful, minimalist web application designed to help you stay focused and organized. Combining a customizable Pomodoro timer, a persistent To-Do list, and daily inspiration, it creates the perfect digital environment for deep work.
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **🍅 Smart Focus Timer**: Built-in Pomodoro technique support with customizable modes (Focus, Short Break, Long Break).
+- **✅ Task Management**: A clean, persistent To-Do list to track your daily goals.
+- **🎨 Glassmorphism Design**: stunning UI with backdrop blur effects, smooth animations, and a calming aesthetic.
+- **🌅 Dynamic Greetings**: Personalized greetings that change with the time of day.
+- **💡 Daily Inspiration**: Curated motivational quotes to keep you going.
+- **📱 Responsive**: Looks great on desktop, tablet, and mobile.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Framework**: [React](https://react.dev/) (v19)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have Node.js installed on your machine.
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/yourusername/focus-flow.git
+   cd focus-flow
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173` (or the port shown in your terminal).
+
+## 📁 Project Structure
+
+```
+focus-flow/
+├── src/
+│   ├── components/     # Reusable UI components (Timer, TodoList, etc.)
+│   ├── hooks/          # Custom React hooks (useTimer, useTodos, etc.)
+│   ├── App.jsx         # Main application layout
+│   └── main.jsx        # Entry point
+└── ...
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).

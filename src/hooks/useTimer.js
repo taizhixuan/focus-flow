@@ -7,7 +7,7 @@ export function useTimer() {
 
   useEffect(() => {
     let interval = null;
-    if (isActive && timeLeft > 0) {
+    if (isActive) {
       interval = setInterval(() => {
         setTimeLeft((prev) => {
           if (prev <= 1) {
