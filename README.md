@@ -1,4 +1,4 @@
-# Focus Flow: Cyberpunk Edition �
+# Focus Flow: Cyberpunk Edition
 
 ![Focus Flow Banner](public/banner-placeholder.png)
 
