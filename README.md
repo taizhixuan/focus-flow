@@ -8,7 +8,7 @@ Focus Flow is a high-fidelity, gamified productivity dashboard designed to turn 
 
 ## ✨ New Features (v2.0)
 
-### � The "Cyber-Pilot" Gamification System
+### The "Cyber-Pilot" Gamification System
 
 Productivity meets RPG.
 
