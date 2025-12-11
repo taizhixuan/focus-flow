@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { RefreshCw } from 'lucide-react';
+import { useSound } from '../hooks/useSound';
 
 const QUOTES = [
   "种一棵树最好的时间是十年前，其次是现在。",
@@ -16,31 +17,33 @@ const QUOTES = [
 
 export default function QuoteCard() {
   const [quoteIndex, setQuoteIndex] = useState(0);
+  const { playSound } = useSound();
 
   const nextQuote = () => {
+    playSound('click');
     setQuoteIndex((prev) => (prev + 1) % QUOTES.length);
   };
 
   return (
-    <div className="bg-gradient-to-br from-indigo-500/90 to-purple-600/90 backdrop-blur-sm rounded-3xl p-8 shadow-lg text-white flex flex-col justify-between flex-1 min-h-[200px] relative overflow-hidden group">
+    <div className="bg-gradient-to-br from-purple-900/80 to-black backdrop-blur-xl rounded-2xl p-8 shadow-[0_0_15px_rgba(189,0,255,0.2)] border border-purple-500/30 text-white flex flex-col justify-between flex-1 min-h-[200px] relative overflow-hidden group hover:border-purple-500/60 transition-colors">
       {/* 背景装饰 */}
-      <div className="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-white opacity-10 rounded-full blur-2xl"></div>
-      <div className="absolute bottom-0 left-0 -mb-4 -ml-4 w-32 h-32 bg-purple-400 opacity-20 rounded-full blur-2xl"></div>
+      <div className="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-purple-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 -mb-4 -ml-4 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl"></div>
       
       <div className="relative z-10">
-        <div className="opacity-80 text-sm font-medium mb-4 flex items-center gap-2">
-          <span>每日灵感</span>
-          <div className="h-px w-8 bg-white/40"></div>
+        <div className="opacity-80 text-xs font-bold tracking-[0.2em] mb-4 flex items-center gap-2 text-purple-300 uppercase">
+          <span>Daily Transmission</span>
+          <div className="h-px w-8 bg-purple-500"></div>
         </div>
-        <p className="text-xl md:text-2xl font-serif leading-relaxed">
+        <p className="text-xl md:text-2xl font-mono leading-relaxed text-slate-100 drop-shadow-md">
           "{QUOTES[quoteIndex]}"
         </p>
       </div>
       
       <button 
         onClick={nextQuote}
-        className="relative z-10 self-end mt-4 p-2 hover:bg-white/20 rounded-full transition-colors opacity-0 group-hover:opacity-100"
-        title="换一句"
+        className="relative z-10 self-end mt-4 p-2 hover:bg-white/10 rounded-lg transition-colors opacity-0 group-hover:opacity-100 text-purple-300"
+        title="Refresh Data"
       >
         <RefreshCw size={18} />
       </button>

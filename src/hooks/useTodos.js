@@ -14,9 +14,15 @@ export function useTodos() {
     localStorage.setItem('focusflow_todos', JSON.stringify(todos));
   }, [todos]);
 
-  const addTodo = (text) => {
+  const addTodo = (text, priority = 'medium', category = 'general') => {
     if (!text.trim()) return;
-    setTodos([...todos, { id: Date.now(), text, completed: false }]);
+    setTodos([...todos, { 
+      id: Date.now(), 
+      text, 
+      completed: false,
+      priority, // 'high', 'medium', 'low'
+      category // 'work', 'personal', 'study', 'dev'
+    }]);
   };
 
   const toggleTodo = (id) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import bgImage from './japan-background-digital-art.jpg';
+import CyberpunkBackground from './components/CyberpunkBackground';
 import { useTime } from './hooks/useTime';
 import { useTodos } from './hooks/useTodos';
 import { useTimer } from './hooks/useTimer';
@@ -21,17 +21,13 @@ export default function App() {
   } = useTimer();
 
   return (
-    <div 
-      className="min-h-screen bg-slate-50 text-slate-800 font-sans selection:bg-indigo-100 selection:text-indigo-700 flex items-center justify-center p-4 md:p-8 relative"
-      style={{
-        backgroundImage: `url(${bgImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/20 pointer-events-none"></div>
+    <div className="min-h-screen text-cyan-50 font-sans selection:bg-cyan-500/30 selection:text-cyan-100 flex items-center justify-center p-4 md:p-8 relative overflow-hidden">
+      
+      {/* Cyberpunk Background */}
+      <CyberpunkBackground />
+      
+      {/* Heavy Overlay for contrast */}
+      {/* <div className="absolute inset-0 bg-black/40 pointer-events-none"></div> */}
 
       {/* Main Content */}
       <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-6 relative z-10">
@@ -74,7 +70,7 @@ export default function App() {
           background: transparent;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-          background-color: #e2e8f0;
+          background-color: #164e63;
           border-radius: 20px;
         }
       `}</style>
