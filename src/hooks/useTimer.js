@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export function useTimer() {
+export function useTimer(onComplete) {
   const [timeLeft, setTimeLeft] = useState(25 * 60);
   const [isActive, setIsActive] = useState(false);
   const [timerMode, setTimerMode] = useState('focus'); // 'focus', 'short', 'long'
@@ -12,6 +12,7 @@ export function useTimer() {
         setTimeLeft((prev) => {
           if (prev <= 1) {
             setIsActive(false);
+            if (onComplete) onComplete();
             return 0;
           }
           return prev - 1;
