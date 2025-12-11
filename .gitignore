@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Personal
+project_ideas_2025.md
+prompts_3d_configurator.md
